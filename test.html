@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>바람기 테스트</title>
+    <meta name="title" content="바람기 테스트" />
+    <meta name="subject" content="관상으로 보는 인공지능 바람기 테스트" />
+    <meta name="keywords"
+        content="바람기 테스트, 인공지능 바람기 테스트, 얼굴상, 얼굴상 테스트, 관상, 얼굴로 보는 바람기테스트, 얼굴, 바람기, 바람기 관상, 인공지능 관상, AI 얼굴상, AI 관상" />
+    <meta name="author" content="관상 바람기 테스트" />
+    <link rel="stylesheet" href="styleTest.css" />
+    <link rel="canonical" href="#" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="바람기 테스트" />
+    <meta property="og:description" content="관상으로 보는 인공지능 바람기 테스트,학습된 인공지능으로 관상을 보아 바람기 관상을 보여줍니다!." />
+    <meta property="og:image"
+        content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0eq42%2FbtqCQpiFhFn%2F8KPaOP9q8PXpJFRL7if55K%2Fimg.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-145482737-6");
+    </script>
+</head>
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">바람기 테스트</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">바람기 테스트
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <h1 class="title">바람기 테스트</h1>
+        <h2 class="subtitle">관상으로 보는 인공지능 바람기 테스트</h2>
+        <h2 class="sr-only">
+            학습된 인공지능으로 관상학적으로 바람기를 봐드립니다!
+        </h2>
+        <h3 class="sr-only">
+            관상학 책을 참고하여 연예인, 인플루언서 등 여러 인물들로 학습된
+            인공지능이 당신의 관상을 분석해 드립니다.
+        </h3>
+        <h4 class="sr-only">
+            본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
+        </h4>
+        <p class="sr-only">
+            얼굴로 보는 인공지능 바람기 테스트, 당신의 관상을 인공지능이 분석해
+            드립니다! 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는
+            그 어디에도 전송, 저장되지 않습니다.
+        </p>
+    </section>
+
+    <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <!-- <img class="d-flex align-items-center pr-3" src="성별_여자.png" alt="" /> -->
+        <p class="d-flex align-items-center pr-3">
+            <img class="img-position-female" src="성별_여자.png" alt="" />
+        </p>
+        <div>
+            <input type="checkbox" id="gender" />
+            <label for="gender">
+                <span class="knob">
+                    <!-- <i></i> -->
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">
+            <img class="img-position-male" src="성별_남자.png" alt="" />
+        </p>
+        <!-- <img class="d-flex align-items-center pl-3" src="성별_남자.png" alt="" /> -->
+    </section>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <img src="곰.png" class="mt-5 pt-5 upload" />
+                <h3 class="mb-5 pb-5 pt-4 upload-text">
+                    자네의 이목구비를 곰곰히 보아하니...
+                </h3>
+                <h5>(사진을 올려놓거나 눌러서 업로드 하세요!)</h5>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h6 class="safe-picture">사진은 어디에도 전송 및 저장되지 않습니다.</h6>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">곰 무당이 당신의 관상을 관찰중입니다.</p>
+            </div>
+            <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+            <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="removeUpload();" data-toggle="modal"
+                    data-target="#adModal">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function removeUpload() {
+            // $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+            // $(".file-upload-content").hide();
+            // $(".image-upload-wrap").show();
+            window.location.reload();
+        }
+        $(".image-upload-wrap").bind("dragover", function () {
+            $(".image-upload-wrap").addClass("image-dropping");
+        });
+        $(".image-upload-wrap").bind("dragleave", function () {
+            $(".image-upload-wrap").removeClass("image-dropping");
+        });
+    </script>
+    <!-- <div id="coupang" class="container d-flex justify-content-center">
+      <script src="https://ads-partners.coupang.com/g.js"></script>
+      <script>
+        new PartnersCoupang.G({
+          id: 141621,
+          subId: null,
+        });
+      </script>
+    </div> -->
+
+    <!-- <div class="mt-2 container d-flex justify-content-center ad-banner">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-1ibeto5pa83fn"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
+    </div>
+    <div class="mt-2 container d-flex justify-content-center ad-banner">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-1jefy9znk6ibb"
+        data-ad-width="300"
+        data-ad-height="250"
+      ></ins>
+    </div> -->
+    <!-- <script
+      type="text/javascript"
+      src="//t1.daumcdn.net/kas/static/ba.min.js"
+      async
+    ></script>
+    <script
+      type="text/javascript"
+      src="//t1.daumcdn.net/kas/static/ba.min.js"
+      async
+    ></script> -->
+
+    <!-- <div class="container pt-3">
+      <div id="disqus_thread"></div>
+    </div> -->
+
+    <!-- Modal -->
+    <!-- <div
+      class="modal fade"
+      id="adModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="adModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="adModalLabel"> -->
+    <!-- (AD)광고 - 재시도를 한번 더 눌러주세요. -->
+    <!-- </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center"> -->
+    <!-- <ins
+              class="kakao_ad_area"
+              style="display: none"
+              data-ad-unit="DAN-t89oh3sc0ew5"
+              data-ad-width="300"
+              data-ad-height="250"
+            ></ins> -->
+    <!-- </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button
+              type="button p-2"
+              class="try-again-btn"
+              onclick="gaReload2();"
+            >
+              <span class="try-again-text">다른 사진으로 재시도</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <script>
+      function gaReload1() {
+        gtag("event", "다른 사진으로 재시도 1차", {
+          event_category: "다른 사진으로 재시도",
+        });
+      }
+      function gaReload2() {
+        gtag("event", "다른 사진으로 재시도 2차", {
+          event_category: "다른 사진으로 재시도",
+        });
+        window.location.reload();
+      }
+    </script> -->
+    <script>
+        (function () {
+            var d = document,
+                s = d.createElement("script");
+            s.src = "https://jocoding.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(".image-upload-wrap").hide();
+                    $("#loading").show();
+                    $(".file-upload-image").attr("src", e.target.result);
+                    $(".file-upload-content").show();
+                    $(".image-title").html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function () {
+                    console.log("hello");
+                    predict();
+                    $("#loading").hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+            $(".file-upload-content").hide();
+            $(".image-upload-wrap").show();
+        }
+        $(".image-upload-wrap").bind("dragover", function () {
+            $(".image-upload-wrap").addClass("image-dropping");
+        });
+        $(".image-upload-wrap").bind("dragleave", function () {
+            $(".image-upload-wrap").removeClass("image-dropping");
+        });
+    </script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale =
+            "https://teachablemachine.withgoogle.com/models/d_oja3HEK/";
+        const urlFemale =
+            "https://teachablemachine.withgoogle.com/models/Y3NcRRjcNV/";
+        let model, webcam, labelContainer, maxPredictions;
+        async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div");
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image");
+            const prediction = await model.predict(image, false);
+            prediction.sort(
+                (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
+            );
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                gtag("event", "바람기 테스트 수행", {
+                    event_category: "바람기 테스트 수행",
+                    event_label: "남자",
+                });
+                switch (prediction[0].className) {
+                    case "속이 깊고 단단한 곰같은 남자":
+                        resultTitle = "속이 깊고 단단한 곰같은 남자";
+                        resultExplain =
+                            "결혼운이 좋은 이마입니다. 또한, 재복이 좋은 코를 가지고 있는데 콧등이 날카로운 편입니다. 이는 자존심이 강한 코라고 할 수 있죠. 따라서 선한 성품과 고집이 강한 ‘두가지’ 성질을 지니고 있습니다.                       결혼에 관하여 바람기가 없는 사람이지만 강한 고집으로 처와 자식들이 스트레스를 받을 수도 있습니다.                              입술은 위아래로 적당한데 아랫 입술이 더 두툼하여 연상보단 연하와 궁합이 잘 맞습니다. 가장 좋은 부위는 귀로, 큰 칼귀에 속하여 인복과 재복이 훌륭합니다. 고집이 쎈 걸 제외한다면 전체적으로 성공운과 재물운이 강하여 가족을 부양할 능력이 출중하고 이성운이 약하여 바람을 필 가능성도 적으며 결혼운이 좋은 훌륭한 배우자 상입니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 최우식,조승우";
+                        gtag("event", "남자 결과 속이 깊고 단단한 곰같은 남자", {
+                            event_category: "남자 결과",
+                        });
+                        break;
+                    case "재복과 인복이 뛰어난 용상":
+                        resultTitle = "재복과 인복이 뛰어난 용상";
+                        resultExplain =
+                            "미간은 적당하고 눈썹이 짙고 가지런히 길게 뻗어있어 재복과 인복이 좋습니다. 또한, 재복이 좋은 코를 가지고 있습니다.              에너지가 활력넘치는 눈을 가지고 있어 전체적으로 보았을 때 용상이라고 할 수 있습니다.하지만 애교살이 두툼하고 인중이 우물 인중에 속하여 이성운이 강한 면도 있습니다.  이에 따라 의도치 않게 주위에 여성이 많아지는 시기가 있습니다.                        다행히 입이 크기 때문에 결혼운이 좋아, 이성을 조심하며 결혼을 늦게 한다면재복과 인복 그리고 결혼운까지 아우를 수 있는 최고의 배우자가 될 수 있을 겁니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 이승기,김영광";
+                        gtag("event", "남자 결과 재복과 인복이 뛰어난 용상", {
+                            event_category: "남자 결과",
+                        });
+                        break;
+                    case "차분하고 자상한 아버지":
+                        resultTitle = "차분하고 자상한 아버지";
+                        resultExplain =
+                            "눈꺼풀이 얇아서 이기적이고 계산적인 면이 있습니다.그러나 이마의 크기가 적당하고 반들반들하여 배우자 복이 좋죠.         인정이 많고 자상한 면이 많아서 자식 교육을 잘 시킬 상입니다.다만 자식에 대한 애착이 남달라 욕심을 부리면 트러블이 일어날 수 있기에 자존심을 굽히고 다정한 성향을 잘 세우셔야 합니다.                                 귀가 부처귀에 속하여 전체적으로 인복이 좋고 침착한 성향이라 잘 관리할 수 있습니다.하지만, 입술과 목의 이성운이 조금 있고 30대 초반까지는 이혼수가 강하기 때문에 결혼을 가능하면 늦게 하는 편이 좋습니다. 그리고 가능하다면 감수성이 풍부하고 여성스러운 면모가 깊은 배우자를 만나는 편이 자식복을 키워줄 확률이 높습니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 주지훈,원우(세븐틴)";
+                        gtag("event", "남자 결과 차분하고 자상한 아버지", {
+                            event_category: "남자 결과",
+                        });
+                        break;
+                    case "다채로운 성향과 화끈한 남성미":
+                        resultTitle = "다채로운 성향과 화끈한 남성미";
+                        resultExplain =
+                            "논리적이고 심사숙고형인 이마와 현실주의인 눈썹 그리고 지혜로운 눈꺼풀을 가지고 있습니다.반면에 볼의 경우 욱하는 성미가 있죠.       눈의 경우 매우 다양한 상을 가지고 있는데 욱하는 성향도 있고 다혈질도 있으나 무덤덤하고 차분한 성향도 가지고 있습니다.           이목구비에 극과 극인 두가지 성향을 지닌 성격입니다.불같은 성향을 죽이고 차분한 성격으로 만들수록 운명이 평탄해질 것입니다.전체적으로 코가 좋아 재복이 있고. 귀가 좋아 인복 또한 출중합니다. 하지만, 인중이 깊은 화개인중이고 눈이 매력적이라 이성운이 강한 편에 속합니다.                      여자들에게 인기가 많은 편이지만 차분한 성향을 지니고 있어 본인이 잘 다스린다면 충분히 좋은 배우자 상이 될 수 있습니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 손석구,박해수";
+                        gtag("event", "남자 결과 다채로운 성향과 화끈한 남성미", {
+                            event_category: "남자 결과",
+                        });
+                        break;
+                    case "여자가 끊이질 않는 매력적인 남자":
+                        resultTitle = "여자가 끊이질 않는 매력적인 남자";
+                        resultExplain =
+                            "미간이 살짝 들어가있어 직감이 강하고 감각이 좋아 무엇이든 빨리 익히고 습득합니다.또한 눈이 들어가있어 자기주장이 쎄고 이기적인 면이 강한 타입입니다.가능하면 곰같은 배우자를 만나는 편이 좋습니다.                     코가 매우 좋습니다. 재복과 배우자복이 매우 좋으며 결혼운 또한 좋아 부부간 사이가 좋습니다.그러나 개성이 강하고 이성운이 강한 면도공존합니다.                             목이 길기 때문에 이성운이 더욱 강해지는데 볼과 광대가 냉정하고 현명한 편이라 이성의 마음을 쉽게 알아차리고 거리 조절을 잘 하는 편입니다.                               이성이 늘 주변에 서성거리지만 본인 스스로 냉정하게 판단하여 이성과 거리 조절을 잘 하며 살아가기만 한다면 최고의 결혼 생활을 이어갈 수 있을 것입니다.";
+                        resultCeleb = "닮은 관상 연예인: 이동욱,태일(NCT)";
+                        gtag("event", "남자 결과 여자가 끊이질 않는 매력적인 남자", { event_category: "남자 결과" });
+                        break;
+                    default:
+                        resultTitle = "알수없음";
+                        resultExplain = "";
+                        resultCeleb = "";
+                        gtag("event", "남자 결과 알수없음", {
+                            event_category: "남자 결과",
+                        });
+                }
+            } else {
+                gtag("event", "바람기 테스트 수행", {
+                    event_category: "바람기 테스트 수행",
+                    event_label: "여자",
+                });
+                switch (prediction[0].className) {
+                    case "남편을 출세시키는 독수리 상":
+                        resultTitle = "남편을 출세시키는 독수리 상";
+                        resultExplain =
+                            "본인뿐만 아니라 남편까지 출세시킬 정도의 눈썹. 깨끗하고 길합니다.               콧대가 시원하게 뻗어있고, 코끝이 죽지 않아있으며 눈매까지 고려한다면 전반전으로 독수리 상입니다.이는 여성으로써 이성운이 약하다는 점인데, 바람기도 없고 주변에 다가오는 이성도 적다고 보시면 됩니다.   최고의 부위는 이마입니다.급이 남다른 남성과 결혼하게 될 것이고, 이미 결혼 전제 하의 이성이 있다면 반드시 출세시키는 이마입니다.결혼 상대로써 최고의 관상이라고 할 수 있습니다.!";
+                        resultCeleb =
+                            "닮은 관상 연예인:다현,송지효";
+                        gtag("event", "여자 결과 남편을 출세시키는 독수리 상 ", {
+                            event_category: "여자 결과",
+                        });
+                        break;
+                    case "귀엽지만 고집이 센 여자":
+                        resultTitle = "귀엽지만 고집이 센 여자";
+                        resultExplain =
+                            "눈썹과 코가 재복이 아주 좋은 코입니다.얼굴에 비해서 입이 약간 작은 편이라 타인에게 속마음을 잘 말하지 않는군요.술을 먹는다면 마음을 열고 속의 이야기를 할 수도 있습니다.눈과 이마가 보기에 아름다운 편이지만 자기 고집이 쎈 성향입니다.이러한 특성은 이성운이 약하고 바람기가 적다는 장점이 있으나 본인이 주도하여 가정을 꾸리고 싶은 욕망이 큽니다. 따라서 마음이 넓은 곰같은 남자를 만난다면 금술 좋게 살아갈 수 있을 겁니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 박보영,오해원(NMIXX)";
+                        gtag("event", "여자 결과 귀엽지만 고집이 센 여자", {
+                            event_category: "여자 결과",
+                        });
+                        break;
+                    case "경국지색의 관상":
+                        resultTitle = "경국지색의 관상";
+                        resultExplain =
+                            "사람을 끌어들이는 눈. 외모도 수려하고 맑으며 매우 좋은 이목구비를 가지고 있습니다.개성이 강한 편이라 사람 마음을 끌어 당기는 면이 강합니다.볼과 광대는 복스러운 상이라 사람들로부터 사랑을 받는 상이고 입술이 위아래로 두툼하여 사회성이 좋고 이성운이 강합니다.재복과 인복 모두 좋은데, 동성 이성 구분 없이 사람들이 많이 꼬이기 때문에 기회가 많이 옵니다. 그만큼 이성 관계를 절제하려고 노력해야 합니다.서른 살까지 순탄하게 흘러간다면 결혼운도 좋아 평생을 사랑받으며 풍족하게 살아갈 수 있습니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 수지,윤아";
+                        gtag("event", "여자 결과 경국지색의 관상", {
+                            event_category: "여자 결과",
+                        });
+                        break;
+                    case "남자를 홀릴 수 있는 매력":
+                        resultTitle = "남자를 홀릴 수 있는 매력";
+                        resultExplain =
+                            "아마는 갈매기 상이라 슬기롭고 지혜롭습니다. 선하고 차분하며 내성적인 눈을 가졌고적당히 재복이 좋은 코를 가졌습니다. 볼과 광대는 복스러운 상이라 남편복이 매우 좋습니다.다만, 입술이 위아래로 두툼하여 이성운이 강한 편인데 만약 웃을 때 잇몸이 보인다면 남자가 많이 붙을 수 있는 상이라고 볼 수 있습니다. 또한, 약간의 바람기가 있는 상이라 본인 스스로 차분하게 이성 관계를 절제하며 살아가야 합니다.";
+                        resultCeleb =
+                            "닮은 관상 연예인: 선미,현아";
+                        gtag("event", "여자 결과 남자를 홀릴 수 있는 매력", {
+                            event_category: "여자 결과",
+                        });
+                        break;
+                    case "모두에게 사랑받는 화려한 셀럽":
+                        resultTitle = "모두에게 사랑받는 화려한 셀럽";
+                        resultExplain =
+                            "사람들에게 인기를 한 몸에 받는 상입니다.눈과 입술 그리고 볼과 광대가 인기가 많고 사랑을 받는 상입니다.여자들에게는 질투와 시기심을 받을 수 있고남자들에게는 수 많은 대시를 받을 수도 있습니다.그러나 이혼수가 강한 이마이고 이성운이 매우 강한 관상입니다.따라서 결혼을 늦게할수록 남편 복이 좋아지고 결혼 운도 좋아집니다.본인 스스로 이성 관계를 절제하며 살아가다 보면 자연스레 인복과 재복을 누리며 살아갈 수 있을 것입니다..";
+                        resultCeleb =
+                            "닮은 관상 연예인: 한소희,신세경";
+                        gtag("event", "여자 결과 모두에게 사랑받는 화려한 셀럽", {
+                            event_category: "여자 결과",
+                        });
+                        break;
+                    default:
+                        resultTitle = "알수없음";
+                        resultExplain = "";
+                        resultCeleb = "";
+                        gtag("event", "여자 결과 알수없음", {
+                            event_category: "여자 결과",
+                        });
+                }
+            }
+            var title =
+                "<div class='" +
+                prediction[0].className +
+                "-animal-title'>" +
+                resultTitle +
+                "</div>";
+            var explain =
+                "<div class='animal-explain pt-2'>" + resultExplain + "</div>";
+            var celeb =
+                "<div class='" +
+                prediction[0].className +
+                "-animal-celeb pt-2 pb-2'>" +
+                resultCeleb +
+                "</div>";
+            $(".result-message").html(title + explain + celeb);
+            /*var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth =
+                        Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%";
+                } else {
+                    barWidth = "2%";
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "속이 깊고 단단한 곰같은 남자":
+                        labelTitle = "속이 깊고 단단한 곰같은 남자";
+                        break;
+                    case "재복과 인복이 뛰어난 용상":
+                        labelTitle = "재복과 인복이 뛰어난 용상";
+                        break;
+                    case "차분하고 자상한 아버지":
+                        labelTitle = "차분하고 자상한 아버지";
+                        break;
+                    case "다채로운 성향과 화끈한 남성미":
+                        labelTitle = "다채로운 성향과 화끈한 남성미";
+                        break;
+                    case "여자가 끊이질 않는 매력적인 남자":
+                        labelTitle = "여자가 끊이질 않는 매력적인 남자";
+                        break;
+                    case "deer":
+                        labelTitle = "사슴상";
+                        break;
+                    case "fox":
+                        labelTitle = "여우상";
+                        break;
+                    default:
+                        labelTitle = "알수없음";
+                }
+                var label =
+                    "<div class='animal-label d-flex align-items-center'>" +
+                    labelTitle +
+                    "</div>";
+                var bar =
+                    "<div class='bar-container position-relative container'><div class='" +
+                    prediction[i].className +
+                    "-box'></div><div class='d-flex justify-content-center align-items-center " +
+                    prediction[i].className +
+                    "-bar' style='width: " +
+                    barWidth +
+                    "'><span class='d-block percent-text'>" +
+                    Math.round(prediction[i].probability.toFixed(2) * 100) +
+                    "%</span></div></div>";
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }*/
+        }
+    </script>
+    <!-- <script>
+      function iosApp() {
+        document.getElementById("coupang").style.display = "none";
+        $("#coupang ins").hide();
+        document.getElementById("addThis").style.display = "none";
+        document.getElementById("disqus_thread").style.display = "none";
+        var kakao = document.getElementsByClassName("kakao_ad_area");
+        for (var i = 0; i < kakao.length; i++) {
+          if (kakao[i]) {
+            kakao[i].style.display = "none";
+          }
+        }
+        document.getElementById("yotube-top-link").style.display = "none";
+        document.getElementById("yotube-mid-link").style.display = "none";
+        document.getElementById("yotube-bottom-link").style.display = "none";
+      }
+    </script> -->
+    <footer class="footer">
+        <h6>Reference:<a href="https://www.youtube.com/@jocoding">조코딩 유튜브</a></h6>
+
+    </footer>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+</html>
